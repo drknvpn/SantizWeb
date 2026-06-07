@@ -33,8 +33,9 @@ const IconMusic = () => (
 );
 
 const IconYandex = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" width={18} height={18}>
-    <path d="M13.2 3H11v18h2.2v-6.8l3.8 6.8h2.5l-4.2-7.2L19.5 3H17l-3.8 6.5V3z" />
+  <svg viewBox="0 0 24 24" width={18} height={18}>
+    <circle cx="12" cy="12" r="10" fill="#FFDB4D" />
+    <text x="12" y="16" textAnchor="middle" fill="#000" fontSize="13" fontWeight="bold" fontFamily="Arial, sans-serif">Я</text>
   </svg>
 );
 
@@ -133,7 +134,7 @@ export default function ArtistPage() {
                 <img
                   src="/1000x1000_(1)-no-bg-preview_(carve.photos).png"
                   alt="Santiz"
-                  className="relative w-180 h-80 md:w-[500px] md:h-[500px] object-cover object-top animate-photo-appear"
+                  className="relative w-80 h-80 md:w-[500px] md:h-[500px] object-cover object-top animate-photo-appear"
                   style={{
                     filter: 'brightness(0.95) contrast(1.05) drop-shadow(0 20px 80px rgba(233,30,99,0.4))',
                   }}
@@ -141,8 +142,8 @@ export default function ArtistPage() {
               </div>
             </div>
 
-            {/* Bio card - positioned to overlap photo bottom */}
-            <div className="glass-card p-10 md:p-14 -mt-24 md:-mt-32 relative z-10">
+            {/* Bio card - positioned to overlap photo bottom more */}
+            <div className="glass-card p-10 md:p-14 -mt-40 md:-mt-56 relative z-10">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-8 h-px" style={{ background: '#E91E63' }} />
                 <span
