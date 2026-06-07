@@ -34,7 +34,7 @@ const IconMusic = () => (
 
 const IconYandex = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width={18} height={18}>
-    <path d="M12.535 2.005C6.604 1.978 1.747 6.791 1.72 12.722c-.027 5.931 4.786 10.788 10.717 10.815 5.931.027 10.788-4.786 10.815-10.717.027-5.932-4.786-10.788-10.717-10.815zm-1.57 15.567h-1.85V6.548h1.85v4.658h.034l3.75-4.658h2.153l-3.918 4.792 4.09 6.232h-2.22l-3.088-4.977-.803.972v4.005z" />
+    <path d="M13.2 3H11v18h2.2v-6.8l3.8 6.8h2.5l-4.2-7.2L19.5 3H17l-3.8 6.5V3z" />
   </svg>
 );
 
@@ -141,8 +141,8 @@ export default function ArtistPage() {
               </div>
             </div>
 
-            {/* Bio card - positioned to start where photo ends */}
-            <div className="glass-card p-10 md:p-14 -mt-8 md:-mt-12 relative z-10">
+            {/* Bio card - positioned to overlap photo bottom */}
+            <div className="glass-card p-10 md:p-14 -mt-24 md:-mt-32 relative z-10">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-8 h-px" style={{ background: '#E91E63' }} />
                 <span
