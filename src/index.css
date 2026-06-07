@@ -149,3 +149,64 @@
     opacity: 0;
   }
 }
+/* Photo appear animation */
+@keyframes photoAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-photo-appear {
+  animation: photoAppear 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Pulse glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1.4);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Ring rotate */
+@keyframes ringRotate {
+  0% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.2) rotate(360deg);
+  }
+}
+
+.animate-ring-rotate {
+  animation: ringRotate 20s linear infinite;
+}
