@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import LinkButton from './LinkButton';
 
 /* ---------- Icons ---------- */
@@ -40,76 +39,8 @@ const IconYandex = () => (
 );
 
 export default function ArtistPage() {
-  const [activeSection, setActiveSection] = useState('bio');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['bio', 'music', 'links'];
-      const scrollPosition = window.scrollY + 300;
-
-      sections.forEach((section) => {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-          }
-        }
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="relative z-10 min-h-screen">
-      {/* ───────── Navigation Menu ───────── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-5">
-        <div className="max-w-6xl mx-auto flex items-center justify-center">
-          <div className="flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection('bio')}
-              className="text-xs uppercase tracking-[0.2em] transition-all duration-300 hover:opacity-100"
-              style={{
-                color: activeSection === 'bio' ? '#E91E63' : 'rgba(255,255,255,0.4)',
-                opacity: activeSection === 'bio' ? 1 : 0.6,
-              }}
-            >
-              Биография
-            </button>
-            <button
-              onClick={() => scrollToSection('music')}
-              className="text-xs uppercase tracking-[0.2em] transition-all duration-300 hover:opacity-100"
-              style={{
-                color: activeSection === 'music' ? '#E91E63' : 'rgba(255,255,255,0.4)',
-                opacity: activeSection === 'music' ? 1 : 0.6,
-              }}
-            >
-              Слушать
-            </button>
-            <button
-              onClick={() => scrollToSection('links')}
-              className="text-xs uppercase tracking-[0.2em] transition-all duration-300 hover:opacity-100"
-              style={{
-                color: activeSection === 'links' ? '#E91E63' : 'rgba(255,255,255,0.4)',
-                opacity: activeSection === 'links' ? 1 : 0.6,
-              }}
-            >
-              Ссылки
-            </button>
-          </div>
-        </div>
-      </nav>
-
       {/* ───────── Main Content ───────── */}
       <div className="relative z-10 min-h-screen flex flex-col items-center px-6 py-20 pb-24">
         <div className="w-full max-w-5xl flex flex-col gap-12">
