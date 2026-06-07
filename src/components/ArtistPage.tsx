@@ -38,12 +38,6 @@ const IconYandex = () => (
   </svg>
 );
 
-const IconArrow = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width={16} height={16}>
-    <path d="M5 12h14M12 5l7 7-7 7" />
-  </svg>
-);
-
 export default function ArtistPage() {
   const [activeSection, setActiveSection] = useState('bio');
 
@@ -116,77 +110,40 @@ export default function ArtistPage() {
       </nav>
 
       {/* ───────── Main Content ───────── */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center px-6 py-32 pb-24">
+      <div className="relative z-10 min-h-screen flex flex-col items-center px-6 py-20 pb-24">
         <div className="w-full max-w-5xl flex flex-col gap-12">
           
-          {/* ───────── Artist Identity ───────── */}
-          <div className="flex flex-col items-center text-center pt-8 pb-4">
+          {/* ──────── Bio Section with Photo ───────── */}
+          <section id="bio" className="scroll-mt-24 relative">
             
-            {/* Large Photo */}
-            <div className="relative mb-10 animate-fade-in">
-              {/* Pulsing glow */}
-              <div
-                className="absolute inset-0 rounded-full pointer-events-none animate-pulse-glow"
-                style={{
-                  background: 'radial-gradient(circle, rgba(233,30,99,0.4) 0%, transparent 70%)',
-                  filter: 'blur(40px)',
-                  transform: 'scale(1.6)',
-                }}
-              />
-              
-              {/* Photo */}
-              <img
-                src="/1000x1000_(1)-no-bg-preview_(carve.photos).png"
-                alt="Santiz"
-                className="relative w-64 h-64 md:w-80 md:h-80 object-cover object-top rounded-full animate-photo-appear"
-                style={{
-                  border: '2px solid rgba(233,30,99,0.4)',
-                  boxShadow: '0 0 0 8px rgba(233,30,99,0.1), 0 0 80px rgba(233,30,99,0.3)',
-                  filter: 'brightness(0.95) contrast(1.05)',
-                }}
-              />
-              
-              {/* Outer ring */}
-              <div
-                className="absolute inset-0 rounded-full pointer-events-none animate-ring-rotate"
-                style={{
-                  border: '1px solid rgba(233,30,99,0.2)',
-                  transform: 'scale(1.25)',
-                }}
-              />
+            {/* Photo emerging from card */}
+            <div className="relative flex justify-center mb-0">
+              <div className="relative animate-fade-in">
+                {/* Large glow behind photo */}
+                <div
+                  className="absolute inset-0 pointer-events-none animate-pulse-glow"
+                  style={{
+                    background: 'radial-gradient(circle, rgba(233,30,99,0.5) 0%, transparent 70%)',
+                    filter: 'blur(50px)',
+                    transform: 'scale(1.8)',
+                  }}
+                />
+                
+                {/* Photo */}
+                <img
+                  src="/1000x1000_(1)-no-bg-preview_(carve.photos).png"
+                  alt="Santiz"
+                  className="relative w-72 h-72 md:w-96 md:h-96 object-cover object-top animate-photo-appear"
+                  style={{
+                    filter: 'brightness(0.95) contrast(1.05) drop-shadow(0 20px 60px rgba(233,30,99,0.3))',
+                  }}
+                />
+              </div>
             </div>
 
-            {/* Logo */}
-            <div className="vhs-logo mb-6">
-              <img
-                src="/image.png"
-                alt="Santiz"
-                className="w-72 md:w-80"
-                style={{
-                  filter: 'drop-shadow(0 0 20px rgba(233,30,99,0.6)) drop-shadow(0 0 50px rgba(233,30,99,0.3))',
-                }}
-              />
-            </div>
-
-            {/* Name + origin */}
-            <p
-              className="text-lg md:text-xl font-medium mb-2"
-              style={{ color: 'rgba(255,255,255,0.7)', letterSpacing: '0.08em' }}
-            >
-              Егор Парамонов
-            </p>
-            <p
-              className="text-sm"
-              style={{ color: 'rgba(255,255,255,0.35)', letterSpacing: '0.2em', textTransform: 'uppercase' }}
-            >
-              Сатпаев · 1998
-            </p>
-          </div>
-
-          {/* ───────── Bio Section ───────── */}
-          <section id="bio" className="scroll-mt-24">
-            <div className="glass-card p-10 md:p-14">
-              <div className="flex items-center gap-4 mb-8">
+            {/* Bio card - positioned to overlap with photo */}
+            <div className="glass-card p-10 md:p-14 -mt-20 md:-mt-32 relative z-10">
+              <div className="flex items-center gap-4 mb-8 pt-12 md:pt-24">
                 <div className="w-8 h-px" style={{ background: '#E91E63' }} />
                 <span
                   className="text-sm uppercase tracking-[0.35em] font-semibold"
@@ -369,7 +326,7 @@ export default function ArtistPage() {
             </div>
           </section>
 
-          {/* ───────── Music Section ───────── */}
+          {/* ──────── Music Section ───────── */}
           <section id="music" className="scroll-mt-24">
             <div className="flex items-center gap-4 mb-6 px-2">
               <span
@@ -457,7 +414,7 @@ export default function ArtistPage() {
             </div>
           </section>
 
-          {/* ───────── Footer ──────── */}
+          {/* ───────── Footer ───────── */}
           <div
             className="flex flex-col items-center gap-5 pt-12 pb-6"
             style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
