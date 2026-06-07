@@ -117,7 +117,7 @@ export default function ArtistPage() {
           {/* ─────── Bio Section with Photo ───────── */}
           <section id="bio" className="scroll-mt-24 relative">
             
-            {/* Photo - positioned to end at top of card */}
+            {/* Photo - large, at the top */}
             <div className="relative flex justify-center mb-0">
               <div className="relative animate-fade-in">
                 {/* Large glow behind photo */}
@@ -134,7 +134,7 @@ export default function ArtistPage() {
                 <img
                   src="/1000x1000_(1)-no-bg-preview_(carve.photos).png"
                   alt="Santiz"
-                  className="relative w-80 h-80 md:w-[500px] md:h-[500px] object-cover object-top animate-photo-appear"
+                  className="relative w-80 h-80 md:w-[550px] md:h-[550px] object-cover object-top animate-photo-appear"
                   style={{
                     filter: 'brightness(0.95) contrast(1.05) drop-shadow(0 20px 80px rgba(233,30,99,0.4))',
                   }}
@@ -142,8 +142,8 @@ export default function ArtistPage() {
               </div>
             </div>
 
-            {/* Bio card - positioned to overlap photo bottom more */}
-            <div className="glass-card p-10 md:p-14 -mt-40 md:-mt-56 relative z-10">
+            {/* Bio card - starts BELOW photo (no overlap) */}
+            <div className="glass-card p-10 md:p-14 mt-0 relative z-10">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-8 h-px" style={{ background: '#E91E63' }} />
                 <span
@@ -415,7 +415,7 @@ export default function ArtistPage() {
             </div>
           </section>
 
-          {/* ───────── Footer ───────── */}
+          {/* ───────── Footer ──────── */}
           <div
             className="flex flex-col items-center gap-5 pt-12 pb-6"
             style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
