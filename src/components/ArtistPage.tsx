@@ -113,10 +113,10 @@ export default function ArtistPage() {
       <div className="relative z-10 min-h-screen flex flex-col items-center px-6 py-20 pb-24">
         <div className="w-full max-w-5xl flex flex-col gap-12">
           
-          {/* ──────── Bio Section with Photo ───────── */}
+          {/* ─────── Bio Section with Photo ───────── */}
           <section id="bio" className="scroll-mt-24 relative">
             
-            {/* Photo emerging from card */}
+            {/* Photo - positioned to end at top of card */}
             <div className="relative flex justify-center mb-0">
               <div className="relative animate-fade-in">
                 {/* Large glow behind photo */}
@@ -124,26 +124,26 @@ export default function ArtistPage() {
                   className="absolute inset-0 pointer-events-none animate-pulse-glow"
                   style={{
                     background: 'radial-gradient(circle, rgba(233,30,99,0.5) 0%, transparent 70%)',
-                    filter: 'blur(50px)',
-                    transform: 'scale(1.8)',
+                    filter: 'blur(60px)',
+                    transform: 'scale(2)',
                   }}
                 />
                 
-                {/* Photo */}
+                {/* Photo - large size */}
                 <img
                   src="/1000x1000_(1)-no-bg-preview_(carve.photos).png"
                   alt="Santiz"
-                  className="relative w-72 h-72 md:w-96 md:h-96 object-cover object-top animate-photo-appear"
+                  className="relative w-80 h-80 md:w-[500px] md:h-[500px] object-cover object-top animate-photo-appear"
                   style={{
-                    filter: 'brightness(0.95) contrast(1.05) drop-shadow(0 20px 60px rgba(233,30,99,0.3))',
+                    filter: 'brightness(0.95) contrast(1.05) drop-shadow(0 20px 80px rgba(233,30,99,0.4))',
                   }}
                 />
               </div>
             </div>
 
-            {/* Bio card - positioned to overlap with photo */}
-            <div className="glass-card p-10 md:p-14 -mt-20 md:-mt-32 relative z-10">
-              <div className="flex items-center gap-4 mb-8 pt-12 md:pt-24">
+            {/* Bio card - positioned to start where photo ends */}
+            <div className="glass-card p-10 md:p-14 -mt-8 md:-mt-12 relative z-10">
+              <div className="flex items-center gap-4 mb-8">
                 <div className="w-8 h-px" style={{ background: '#E91E63' }} />
                 <span
                   className="text-sm uppercase tracking-[0.35em] font-semibold"
@@ -326,7 +326,7 @@ export default function ArtistPage() {
             </div>
           </section>
 
-          {/* ──────── Music Section ───────── */}
+          {/* ─────── Music Section ───────── */}
           <section id="music" className="scroll-mt-24">
             <div className="flex items-center gap-4 mb-6 px-2">
               <span
