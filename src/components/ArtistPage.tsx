@@ -133,7 +133,7 @@ export default function ArtistPage() {
                 <img
                   src="/1000x1000_(1)-no-bg-preview_(carve.photos).png"
                   alt="Santiz"
-                  className="relative w-80 h-80 md:w-[500px] md:h-[500px] object-cover object-top animate-photo-appear"
+                  className="relative w-180 h-80 md:w-[500px] md:h-[500px] object-cover object-top animate-photo-appear"
                   style={{
                     filter: 'brightness(0.95) contrast(1.05) drop-shadow(0 20px 80px rgba(233,30,99,0.4))',
                   }}
