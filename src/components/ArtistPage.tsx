@@ -350,35 +350,38 @@ export default function ArtistPage() {
           </section>
 
           {/* ───────── Footer ──────── */}
-          <div
-            className="flex flex-col items-center gap-5 pt-12 pb-6 w-full"
-            style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
-          >
-            <div className="flex items-center gap-6">
-              <a href="https://vk.com/paramonov_yegor" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
-                <IconVK />
-              </a>
-              <a href="https://www.youtube.com/@azg_santiz" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
-                <IconYouTube />
-              </a>
-              <a href="https://instagram.com/azg_santiz" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
-                <IconInstagram />
-              </a>
-              <a href="https://t.me/azg_recordz" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
-                <IconTelegram />
-              </a>
-            </div>
-            
-            <div className="flex items-center gap-3">
-              <img src="/image.png" alt="Santiz" className="h-5 w-auto opacity-40" />
-              <span className="text-xs" style={{ color: 'rgba(255,255,255,0.25)', letterSpacing: '0.1em' }}>
-                © 2026 Santiz
-              </span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  );
-}
+<div
+  className="flex flex-col items-center gap-5 pt-12 pb-6"
+  style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
+>
+  <div className="flex items-center gap-6">
+    <a href="https://vk.com/paramonov_yegor" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
+      <IconVK />
+    </a>
+    <a href="https://www.youtube.com/@azg_santiz" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
+      <IconYouTube />
+    </a>
+    <a href="https://instagram.com/azg_santiz" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
+      <IconInstagram />
+    </a>
+    <a href="https://t.me/azg_recordz" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
+      <IconTelegram />
+    </a>
+  </div>
+  
+  <div className="flex items-center gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.2)' }}>
+    <span>Сделано для</span>
+    <span style={{ color: 'rgba(233,30,99,0.5)' }}>Santiz</span>
+    <span>· 2026</span>
+    <span style={{ color: 'rgba(255,255,255,0.1)' }}>|</span>
+    <a 
+      href="https://your-portfolio-link.com" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="transition-colors duration-300 hover:text-white"
+      style={{ color: 'rgba(255,255,255,0.25)' }}
+    >
+      by Your Name
+    </a>
+  </div>
+</div>
