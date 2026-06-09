@@ -229,9 +229,9 @@ export default function ArtistPage() {
                 </div>
               </div>
 
-              {/* Stats */}
+             {/* Stats */}
 <div
-  className="grid grid-cols-3 gap-4 md:gap-6 pt-10 mt-10 px-2"
+  className="grid grid-cols-3 gap-2 md:gap-6 pt-10 mt-10 px-0 md:px-2"
   style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
 >
   {[
@@ -239,16 +239,20 @@ export default function ArtistPage() {
     { value: '3', label: 'Альбома' },
     { value: '10M+', label: 'Прослушиваний' },
   ].map((s) => (
-    <div key={s.label} className="text-center min-w-0">
+    <div key={s.label} className="text-center min-w-0 px-1">
       <div
-        className="text-2xl md:text-3xl lg:text-4xl font-bold mb-1 md:mb-2"
+        className="text-xl md:text-3xl lg:text-4xl font-bold mb-1 md:mb-2"
         style={{ color: '#E91E63', letterSpacing: '-0.02em' }}
       >
         {s.value}
       </div>
       <div
-        className="text-[10px] md:text-xs uppercase tracking-wide md:tracking-widest truncate"
-        style={{ color: 'rgba(255,255,255,0.35)' }}
+        className="text-[10px] md:text-xs uppercase leading-tight"
+        style={{ 
+          color: 'rgba(255,255,255,0.35)',
+          letterSpacing: '0.05em',
+          wordBreak: 'break-word',
+        }}
       >
         {s.label}
       </div>
