@@ -230,33 +230,31 @@ export default function ArtistPage() {
               </div>
 
               {/* Stats */}
-              <div
-                className="grid grid-cols-3 gap-6 pt-10 mt-10"
-                style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
-              >
-                {[
-                  { value: '2018', label: 'Дебют' },
-                  { value: '3', label: 'Альбома' },
-                  { value: '10M+', label: 'Прослушиваний' },
-                ].map((s) => (
-                  <div key={s.label} className="text-center">
-                    <div
-                      className="text-3xl md:text-4xl font-bold mb-2"
-                      style={{ color: '#E91E63', letterSpacing: '-0.02em' }}
-                    >
-                      {s.value}
-                    </div>
-                    <div
-                      className="text-xs uppercase tracking-widest"
-                      style={{ color: 'rgba(255,255,255,0.35)' }}
-                    >
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
+<div
+  className="grid grid-cols-3 gap-4 md:gap-6 pt-10 mt-10 px-2"
+  style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
+>
+  {[
+    { value: '2018', label: 'Дебют' },
+    { value: '3', label: 'Альбома' },
+    { value: '10M+', label: 'Прослушиваний' },
+  ].map((s) => (
+    <div key={s.label} className="text-center min-w-0">
+      <div
+        className="text-2xl md:text-3xl lg:text-4xl font-bold mb-1 md:mb-2"
+        style={{ color: '#E91E63', letterSpacing: '-0.02em' }}
+      >
+        {s.value}
+      </div>
+      <div
+        className="text-[10px] md:text-xs uppercase tracking-wide md:tracking-widest truncate"
+        style={{ color: 'rgba(255,255,255,0.35)' }}
+      >
+        {s.label}
+      </div>
+    </div>
+  ))}
+</div>
 
           {/* ─────── Music Section ───────── */}
           <section id="music" className="scroll-mt-24">
