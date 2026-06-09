@@ -48,30 +48,30 @@ export default function ArtistPage() {
           {/* ─────── Bio Section with Photo ───────── */}
           <section id="bio" className="scroll-mt-24 relative w-full">
             
-           {/* Photo - large, at the top */}
-<div className="relative flex justify-center mb-0 w-full">
-  <div className="relative animate-fade-in">
-    {/* Large glow behind photo */}
-    <div
-      className="absolute inset-0 pointer-events-none animate-pulse-glow"
-      style={{
-        background: 'radial-gradient(circle, rgba(233,30,99,0.5) 0%, transparent 70%)',
-        filter: 'blur(60px)',
-        transform: 'scale(2)',
-      }}
-    />
-    
-    {/* Photo - large size */}
-    <img
-      src="/1000x1000_(1)-no-bg-preview_(carve.photos).png"
-      alt="Santiz"
-      className="relative w-80 h-80 md:w-[550px] md:h-[550px] object-cover object-top animate-photo-appear max-w-full"
-      style={{
-        filter: 'brightness(0.95) contrast(1.05) drop-shadow(0 20px 80px rgba(233,30,99,0.4))',
-      }}
-    />
-  </div>
-</div>
+            {/* Photo - large, at the top */}
+            <div className="relative flex justify-center mb-0 w-full">
+              <div className="relative animate-fade-in">
+                {/* Large glow behind photo */}
+                <div
+                  className="absolute inset-0 pointer-events-none animate-pulse-glow"
+                  style={{
+                    background: 'radial-gradient(circle, rgba(233,30,99,0.5) 0%, transparent 70%)',
+                    filter: 'blur(60px)',
+                    transform: 'scale(2)',
+                  }}
+                />
+                
+                {/* Photo - large size */}
+                <img
+                  src="/1000x1000_(1)-no-bg-preview_(carve.photos).png"
+                  alt="Santiz"
+                  className="relative w-80 h-80 md:w-[550px] md:h-[550px] object-cover object-top animate-photo-appear max-w-full"
+                  style={{
+                    filter: 'brightness(0.95) contrast(1.05) drop-shadow(0 20px 80px rgba(233,30,99,0.4))',
+                  }}
+                />
+              </div>
+            </div>
 
             {/* Bio card - starts BELOW photo (no overlap) */}
             <div className="glass-card p-6 md:p-10 lg:p-14 mt-0 relative z-10 w-full mx-0">
@@ -350,39 +350,44 @@ export default function ArtistPage() {
           </section>
 
           {/* ───────── Footer ──────── */}
-<div
-  className="flex flex-col items-center gap-5 pt-12 pb-6"
-  style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
->
-  <div className="flex items-center gap-6">
-    <a href="https://vk.com/paramonov_yegor" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
-      <IconVK />
-    </a>
-    <a href="https://www.youtube.com/@azg_santiz" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
-      <IconYouTube />
-    </a>
-    <a href="https://instagram.com/azg_santiz" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
-      <IconInstagram />
-    </a>
-    <a href="https://t.me/azg_recordz" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
-      <IconTelegram />
-    </a>
-  </div>
-  
-  <div className="flex items-center gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.2)' }}>
-    <span>Сделано для</span>
-    <span style={{ color: 'rgba(233,30,99,0.5)' }}>Santiz</span>
-    <span>· 2026</span>
-    <span style={{ color: 'rgba(255,255,255,0.1)' }}>|</span>
-    <a 
-      href="https://your-portfolio-link.com" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="transition-colors duration-300 hover:text-white"
-      style={{ color: 'rgba(255,255,255,0.25)' }}
-    >
-      by Your Name
-    </a>
-  </div>
-</div>
-</div>
+          <div
+            className="flex flex-col items-center gap-5 pt-12 pb-6 w-full"
+            style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
+          >
+            <div className="flex items-center gap-6">
+              <a href="https://vk.com/paramonov_yegor" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                <IconVK />
+              </a>
+              <a href="https://www.youtube.com/@azg_santiz" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                <IconYouTube />
+              </a>
+              <a href="https://instagram.com/azg_santiz" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                <IconInstagram />
+              </a>
+              <a href="https://t.me/azg_recordz" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                <IconTelegram />
+              </a>
+            </div>
+            
+            <div className="flex items-center gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.2)' }}>
+              <span>Сделано для</span>
+              <span style={{ color: 'rgba(233,30,99,0.5)' }}>Santiz</span>
+              <span>· 2026</span>
+              <span style={{ color: 'rgba(255,255,255,0.1)' }}>|</span>
+              <a 
+                href="https://vk.com/corona92" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="transition-colors duration-300 hover:text-white"
+                style={{ color: 'rgba(255,255,255,0.25)' }}
+              >
+                Aristo
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  );
+}
