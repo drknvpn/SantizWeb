@@ -40,16 +40,16 @@ const IconYandex = () => (
 
 export default function ArtistPage() {
   return (
-    <div className="relative z-10 min-h-screen">
+    <div className="relative z-10 min-h-screen overflow-x-hidden">
       {/* ───────── Main Content ───────── */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center px-6 py-20 pb-24">
-        <div className="w-full max-w-5xl flex flex-col gap-12">
+      <div className="relative z-10 min-h-screen flex flex-col items-center px-4 md:px-6 py-20 pb-24 w-full max-w-full">
+        <div className="w-full max-w-5xl flex flex-col gap-12 px-0 md:px-2">
           
           {/* ─────── Bio Section with Photo ───────── */}
-          <section id="bio" className="scroll-mt-24 relative">
+          <section id="bio" className="scroll-mt-24 relative w-full">
             
             {/* Photo - large, at the top */}
-            <div className="relative flex justify-center mb-0">
+            <div className="relative flex justify-center mb-0 w-full overflow-hidden">
               <div className="relative animate-fade-in">
                 {/* Large glow behind photo */}
                 <div
@@ -65,7 +65,7 @@ export default function ArtistPage() {
                 <img
                   src="/1000x1000_(1)-no-bg-preview_(carve.photos).png"
                   alt="Santiz"
-                  className="relative w-80 h-80 md:w-[550px] md:h-[550px] object-cover object-top animate-photo-appear"
+                  className="relative w-80 h-80 md:w-[550px] md:h-[550px] object-cover object-top animate-photo-appear max-w-full"
                   style={{
                     filter: 'brightness(0.95) contrast(1.05) drop-shadow(0 20px 80px rgba(233,30,99,0.4))',
                   }}
@@ -74,7 +74,7 @@ export default function ArtistPage() {
             </div>
 
             {/* Bio card - starts BELOW photo (no overlap) */}
-            <div className="glass-card p-10 md:p-14 mt-0 relative z-10">
+            <div className="glass-card p-6 md:p-10 lg:p-14 mt-0 relative z-10 w-full mx-0">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-8 h-px" style={{ background: '#E91E63' }} />
                 <span
@@ -229,38 +229,40 @@ export default function ArtistPage() {
                 </div>
               </div>
 
-             {/* Stats */}
-<div
-  className="grid grid-cols-3 gap-2 pt-5 px-2"
-  style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
->
-  {[
-    { value: '2018', label: 'Дебют' },
-    { value: '3', label: 'Альбома' },
-    { value: '10M+', label: 'Прослуш.' },
-  ].map((s) => (
-    <div key={s.label} className="text-center px-1 overflow-hidden">
-      <div
-        className="text-lg md:text-xl font-bold mb-0.5"
-        style={{ color: '#E91E63', letterSpacing: '-0.02em' }}
-      >
-        {s.value}
-      </div>
-      <div
-        className="text-[9px] uppercase leading-tight break-all"
-        style={{ 
-          color: 'rgba(255,255,255,0.22)',
-          letterSpacing: '0.01em',
-        }}
-      >
-        {s.label}
-      </div>
-    </div>
-  ))}
-</div>
+              {/* Stats */}
+              <div
+                className="grid grid-cols-3 gap-1 pt-5 w-full overflow-hidden"
+                style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
+              >
+                {[
+                  { value: '2018', label: 'Дебют' },
+                  { value: '3', label: 'Альбома' },
+                  { value: '10M+', label: 'Прослуш.' },
+                ].map((s) => (
+                  <div key={s.label} className="text-center px-0.5 overflow-hidden">
+                    <div
+                      className="text-base md:text-lg font-bold mb-0.5"
+                      style={{ color: '#E91E63', letterSpacing: '-0.02em' }}
+                    >
+                      {s.value}
+                    </div>
+                    <div
+                      className="text-[9px] md:text-[10px] uppercase leading-none whitespace-nowrap overflow-hidden text-ellipsis"
+                      style={{ 
+                        color: 'rgba(255,255,255,0.22)',
+                        letterSpacing: '0.01em',
+                      }}
+                    >
+                      {s.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
           {/* ─────── Music Section ───────── */}
-          <section id="music" className="scroll-mt-24">
+          <section id="music" className="scroll-mt-24 w-full">
             <div className="flex items-center gap-4 mb-6 px-2">
               <span
                 className="text-xs uppercase tracking-[0.35em] font-semibold"
@@ -271,7 +273,7 @@ export default function ArtistPage() {
               <div className="flex-1 h-px" style={{ background: 'rgba(255,255,255,0.06)' }} />
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-0">
               <LinkButton
                 href="https://vk.com/azg_recordz"
                 icon={<IconVK />}
@@ -297,7 +299,7 @@ export default function ArtistPage() {
           </section>
 
           {/* ───────── Links Section ───────── */}
-          <section id="links" className="scroll-mt-24">
+          <section id="links" className="scroll-mt-24 w-full">
             <div className="flex items-center gap-4 mb-6 px-2">
               <span
                 className="text-xs uppercase tracking-[0.35em] font-semibold"
@@ -308,7 +310,7 @@ export default function ArtistPage() {
               <div className="flex-1 h-px" style={{ background: 'rgba(255,255,255,0.06)' }} />
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-0">
               <LinkButton
                 href="https://vk.com/paramonov_yegor"
                 icon={<IconVK />}
@@ -349,7 +351,7 @@ export default function ArtistPage() {
 
           {/* ───────── Footer ──────── */}
           <div
-            className="flex flex-col items-center gap-5 pt-12 pb-6"
+            className="flex flex-col items-center gap-5 pt-12 pb-6 w-full"
             style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
           >
             <div className="flex items-center gap-6">
