@@ -385,3 +385,4 @@ export default function ArtistPage() {
     </a>
   </div>
 </div>
+</div>
