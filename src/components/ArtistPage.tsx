@@ -237,7 +237,7 @@ export default function ArtistPage() {
                 {[
                   { value: '2018', label: 'Дебют' },
                   { value: '3', label: 'Альбома' },
-                  { value: '10M+', label: 'Прослуш.' },
+                  { value: '10M+', label: 'Прослушиваний' },
                 ].map((s) => (
                   <div key={s.label} className="text-center px-0.5 overflow-hidden">
                     <div
