@@ -48,30 +48,30 @@ export default function ArtistPage() {
           {/* ─────── Bio Section with Photo ───────── */}
           <section id="bio" className="scroll-mt-24 relative w-full">
             
-            {/* Photo - large, at the top */}
-            <div className="relative flex justify-center mb-0 w-full overflow-hidden">
-              <div className="relative animate-fade-in">
-                {/* Large glow behind photo */}
-                <div
-                  className="absolute inset-0 pointer-events-none animate-pulse-glow"
-                  style={{
-                    background: 'radial-gradient(circle, rgba(233,30,99,0.5) 0%, transparent 70%)',
-                    filter: 'blur(60px)',
-                    transform: 'scale(2)',
-                  }}
-                />
-                
-                {/* Photo - large size */}
-                <img
-                  src="/1000x1000_(1)-no-bg-preview_(carve.photos).png"
-                  alt="Santiz"
-                  className="relative w-80 h-80 md:w-[550px] md:h-[550px] object-cover object-top animate-photo-appear max-w-full"
-                  style={{
-                    filter: 'brightness(0.95) contrast(1.05) drop-shadow(0 20px 80px rgba(233,30,99,0.4))',
-                  }}
-                />
-              </div>
-            </div>
+           {/* Photo - large, at the top */}
+<div className="relative flex justify-center mb-0 w-full">
+  <div className="relative animate-fade-in">
+    {/* Large glow behind photo */}
+    <div
+      className="absolute inset-0 pointer-events-none animate-pulse-glow"
+      style={{
+        background: 'radial-gradient(circle, rgba(233,30,99,0.5) 0%, transparent 70%)',
+        filter: 'blur(60px)',
+        transform: 'scale(2)',
+      }}
+    />
+    
+    {/* Photo - large size */}
+    <img
+      src="/1000x1000_(1)-no-bg-preview_(carve.photos).png"
+      alt="Santiz"
+      className="relative w-80 h-80 md:w-[550px] md:h-[550px] object-cover object-top animate-photo-appear max-w-full"
+      style={{
+        filter: 'brightness(0.95) contrast(1.05) drop-shadow(0 20px 80px rgba(233,30,99,0.4))',
+      }}
+    />
+  </div>
+</div>
 
             {/* Bio card - starts BELOW photo (no overlap) */}
             <div className="glass-card p-6 md:p-10 lg:p-14 mt-0 relative z-10 w-full mx-0">
