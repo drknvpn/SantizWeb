@@ -231,8 +231,8 @@ export default function ArtistPage() {
 
              {/* Stats */}
 <div
-  className="grid grid-cols-3 gap-2 md:gap-6 pt-10 mt-10 px-0 md:px-2"
-  style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
+  className="grid grid-cols-3 gap-1 md:gap-2 pt-5 px-2"
+  style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
 >
   {[
     { value: '2018', label: 'Дебют' },
@@ -241,7 +241,7 @@ export default function ArtistPage() {
   ].map((s) => (
     <div key={s.label} className="text-center min-w-0 px-1">
       <div
-        className="text-xl md:text-3xl lg:text-4xl font-bold mb-1 md:mb-2"
+        className="text-lg md:text-xl font-bold mb-0.5 md:mb-1"
         style={{ color: '#E91E63', letterSpacing: '-0.02em' }}
       >
         {s.value}
@@ -249,9 +249,9 @@ export default function ArtistPage() {
       <div
         className="text-[10px] md:text-xs uppercase leading-tight"
         style={{ 
-          color: 'rgba(255,255,255,0.35)',
-          letterSpacing: '0.05em',
-          wordBreak: 'break-word',
+          color: 'rgba(255,255,255,0.22)',
+          letterSpacing: '0.02em',
+          lineHeight: '1.2',
         }}
       >
         {s.label}
