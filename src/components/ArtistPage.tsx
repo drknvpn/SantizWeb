@@ -231,27 +231,26 @@ export default function ArtistPage() {
 
              {/* Stats */}
 <div
-  className="grid grid-cols-3 gap-1 md:gap-2 pt-5 px-2"
+  className="grid grid-cols-3 gap-2 pt-5 px-1"
   style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
 >
   {[
     { value: '2018', label: 'Дебют' },
     { value: '3', label: 'Альбома' },
-    { value: '10M+', label: 'Прослушиваний' },
+    { value: '10M+', label: 'Сыграно' },
   ].map((s) => (
-    <div key={s.label} className="text-center min-w-0 px-1">
+    <div key={s.label} className="text-center px-1">
       <div
-        className="text-lg md:text-xl font-bold mb-0.5 md:mb-1"
+        className="text-xl font-bold mb-0.5"
         style={{ color: '#E91E63', letterSpacing: '-0.02em' }}
       >
         {s.value}
       </div>
       <div
-        className="text-[10px] md:text-xs uppercase leading-tight"
+        className="text-[11px] uppercase whitespace-nowrap"
         style={{ 
           color: 'rgba(255,255,255,0.22)',
-          letterSpacing: '0.02em',
-          lineHeight: '1.2',
+          letterSpacing: '0.05em',
         }}
       >
         {s.label}
